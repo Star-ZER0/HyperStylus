@@ -1,0 +1,76 @@
+name: Android CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up JDK
+        uses: actions/setup-java@v6
+        with:
+          java-version: '21'
+          distribution: temurin
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-37.2 build-tools;37.0.0'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Grant execute permission
+        run: chmod +x ./gradlew
+
+      - name: Build, test and lint
+        run: >-
+          ./gradlew --no-daemon
+          :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+          :app:assembleRelease :app:lintRelease
+
+      - name: Upload outputs and reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: HyperStylus-outputs-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            app/build/outputs/
+            app/build/reports/
+            app/build/test-results/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: HyperStylus-debug-${{ github.run_number }}-${{ github.run_attempt }}
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload unsigned release APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: HyperStylus-release-unsigned-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            app/build/outputs/apk/release/*-unsigned.apk
+          if-no-files-found: error
+          retention-days: 14

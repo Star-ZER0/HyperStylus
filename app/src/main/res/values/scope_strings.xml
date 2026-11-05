@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scope_required">已开启功能需要的作用域</string>
+    <string name="scope_syncing">正在同步作用域</string>
+    <string name="scope_retry">重新申请作用域</string>
+    <string name="scope_note">开启功能后会向框架申请所需作用域；关闭功能时，仅移除其他已开启功能都不再需要的作用域。作用域变更后：system 必须重启手机，其他作用域必须重启对应应用进程。新增作用域须先获框架批准。移除作用域不会卸载当前进程中已注入的模块，当前功能由配置开关控制。</string>
+</resources>

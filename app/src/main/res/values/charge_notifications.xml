@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charge_notifications_title">手写笔充电通知</string>
+    <string name="charging_notification_enabled">充电时通知</string>
+    <string name="charging_notification_summary">显示充电状态，可停止充电或选择本次充满</string>
+    <string name="attached_notification_enabled">吸附未充电时通知</string>
+    <string name="attached_notification_summary">显示吸附未充电状态，到停止上限后可选择本次充满</string>
+    <string name="charge_notifications_note">通知独立于电量显示和充电限制。停止充电持续到取下笔；本次充满临时将上限设为 100%，可在通知中取消；本次开始充电跳过下限，仍遵守停止上限；到上限后可改选本次充满，未开启限制时充满。取下笔、断开连接或关闭两个通知开关后结束本次操作。系统低电量、温度等保护始终优先。</string>
+    <string name="charge_notification_channel">HyperStylus · 手写笔充电</string>
+    <string name="charge_notification_charging">手写笔正在充电</string>
+    <string name="charge_notification_attached">手写笔已吸附，未充电</string>
+    <string name="charge_notification_level">电量 %1$d%%</string>
+    <string name="charge_notification_unknown">等待电量更新</string>
+    <string name="charge_notification_target">本次充至 %1$d%%</string>
+    <string name="charge_notification_paused">本次已停止充电</string>
+    <string name="charge_notification_protected">系统保护生效，暂时无法开始充电</string>
+    <string name="charge_notification_tablet_low">设备电量 %1$d%%，低于 %2$d%%，暂时无法开始充电</string>
+    <string name="charge_notification_at_limit">已达到停止上限</string>
+    <string name="charge_notification_waiting">等待当前手写笔的有效电量</string>
+    <string name="charge_notification_stop">停止充电</string>
+    <string name="charge_notification_full">本次充满</string>
+    <string name="charge_notification_cancel_full">取消本次充满</string>
+    <string name="charge_notification_start">本次开始充电</string>
+</resources>

@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name" translatable="false">HyperStylus</string>
+    <string name="subtitle">@string/app_name</string>
+    <string name="section_battery">电量显示</string>
+    <string name="battery_enabled">显示触控笔电量</string>
+    <string name="battery_summary">连接时显示，断开后自动隐藏</string>
+    <string name="display_title">显示位置</string>
+    <string name="charge_limit_title">触控笔充电限制</string>
+    <string name="charge_limit_enabled">限制触控笔充电</string>
+    <string name="charge_limit_summary">未连接或等待新笔电量时放行，读到电量后按上下限控制</string>
+    <string name="charge_start">开始充电电量</string>
+    <string name="charge_stop">停止充电电量</string>
+    <string name="charge_range">充电范围</string>
+    <string name="range_decrease">减小%1$s</string>
+    <string name="range_increase">增大%1$s</string>
+    <string name="charge_limit_note" formatted="false">上下限至少相差 5%。没有笔连接，或新连接的笔尚未上报有效电量时持续放行供电。读到当前笔的有效电量后，不高于下限则允许本轮充至上限；高于下限时的真实停充也结束本轮。重新连接会清除旧笔的电量和许可。系统低电、温度等保护仍优先，覆盖安装后需重启。</string>
+    <string-array name="display_modes">
+        <item>仅在任务栏显示</item>
+        <item>仅在控制中心显示</item>
+        <item>二者都显示</item>
+    </string-array>
+    <string name="section_pro">Pro 设置</string>
+    <string name="pro_enabled">启用焦点触控笔 Pro 设置界面</string>
+    <string name="pro_summary">通过安全核心启用原生 Pro 手势选项</string>
+    <string name="pro_note">启用时会自动申请安全核心作用域。作用域变更后，须重启安全核心进程再打开原生触控笔设置页；下方按键映射可独立使用。实际手势支持取决于系统版本与应用。</string>
+    <string name="section_keys">全局按键映射</string>
+    <string name="section_app_mappings">分应用配置</string>
+    <string name="app_mappings_title">应用按键映射</string>
+    <string name="app_mappings_summary">已启用 %1$d 个应用，其余应用使用全局设置</string>
+    <string name="app_list_note">勾选复选框启用独立按键映射，点击应用编辑。未勾选的应用使用全局设置；取消勾选保留配置。</string>
+    <string name="app_search">搜索应用名称或包名</string>
+    <string name="apps_empty">没有匹配的应用</string>
+    <string name="app_mapping_checkbox">为 %1$s 启用独立按键映射</string>
+    <string name="app_mapping_enabled">为此应用启用独立映射</string>
+    <string name="app_mapping_active">此应用位于前台时使用下方映射</string>
+    <string name="app_mapping_global">当前使用全局按键映射</string>
+    <string name="app_mapping_note">首次启用会复制当前全局映射。关闭后保留独立配置，重新启用可恢复。</string>
+    <string name="app_not_installed">应用未安装，已保留其配置。</string>
+    <string name="back">返回</string>
+    <string name="show_system_apps">显示系统应用</string>
+    <string name="enable_system_apps">对系统应用全部启用</string>
+    <string name="apps_bulk_mapping">批量启用系统应用的独立按键映射，取消后保留配置</string>
+    <string name="app_access_denied">应用列表读取受限，请允许读取应用列表后返回。已有配置会保留。</string>
+    <string name="app_load_failed">应用列表读取失败，请重试。</string>
+    <string name="app_request_access">申请读取应用列表</string>
+    <string name="app_access_settings_unavailable">无法打开权限页面，请在系统应用管理中允许读取应用列表。</string>
+    <string name="retry">重新读取</string>
+    <string name="keys_note">每个按键可独立启用或关闭映射；关闭时保留全局与分应用配置。启用后可选择“单击与长按”或“完整映射”。单击与长按模式按住 380 毫秒触发长按，松开后不再触发单击；两项都选“系统默认”时由系统处理。完整映射让目标按键随笔按键按下、重复和松开。Pro 双击与滑动需要应用支持，部分应用还要求真实 Pro 笔。</string>
+    <string name="focus_key">焦点键</string>
+    <string name="upper_key">上键</string>
+    <string name="lower_key">下键</string>
+    <string name="key_mapping_enabled">启用此按键映射</string>
+    <string name="key_mapping_enabled_summary">关闭后使用原生按键行为，保留已有动作配置</string>
+    <string name="click_action">单击</string>
+    <string name="long_action">长按</string>
+    <string name="key_mapping_mode">映射模式</string>
+    <string-array name="key_mapping_modes">
+        <item>单击与长按</item>
+        <item>完整映射</item>
+    </string-array>
+    <string name="full_mapping_target">目标按键</string>
+    <string name="full_mapping_note">按下笔按键时立即按下目标键，按住时按系统间隔重复，松开时释放。当前单击和长按配置会保留，切回“单击与长按”即可恢复。</string>
+    <string name="native_focus">系统默认（激光笔）</string>
+    <string-array name="action_labels">
+        <item>系统默认</item>
+        <item>Pro 轻捏</item>
+        <item>Pro 双击笔杆</item>
+        <item>Pro 上滑 / 上一页</item>
+        <item>Pro 下滑 / 下一页</item>
+        <item>键盘方向键：上</item>
+        <item>键盘方向键：下</item>
+        <item>键盘方向键：左</item>
+        <item>键盘方向键：右</item>
+        <item>返回</item>
+        <item>回到桌面</item>
+        <item>多任务</item>
+        <item>区域截图</item>
+        <item>全屏截图</item>
+        <item>灵感速记</item>
+        <item>播放 / 暂停</item>
+        <item>音量加</item>
+        <item>音量减</item>
+        <item>开关手电筒</item>
+        <item>电源键</item>
+        <item>锁屏</item>
+        <item>唤醒语音助手</item>
+        <item>键盘自选按键</item>
+        <item>无操作</item>
+    </string-array>
+    <string name="setup_note">首次使用：在模块管理器中启用本模块并重启设备。修改设置后自动保存。</string>
+    <string name="save_failed">设置未保存，请重试</string>
+    <string name="signal_title">触控笔信号</string>
+    <string name="signal_enabled">显示触控笔信号</string>
+    <string name="signal_enabled_summary">显示 RSSI 水波纹，关闭后停止信号采样</string>
+    <string name="signal_range">信号阈值范围</string>
+    <string name="signal_one">一格信号最低值</string>
+    <string name="signal_two">两格信号最低值</string>
+    <string name="signal_note">RSSI 达到阈值时点亮对应水波纹；数值越接近 0，信号越强。未吸附时显示，未获取或超过 10 秒未更新时两条均变灰。熄屏、吸附、关闭信号或电量显示时暂停采样；关闭信号不会清除阈值设置。</string>
+    <string name="gesture_title">手势防误触</string>
+    <string name="ignore_stylus_back">禁止触控笔侧边返回手势</string>
+    <string name="ignore_stylus_back_summary">笔尖和橡皮擦的边缘滑动交给前台应用，手指返回照常使用。仅影响两侧返回手势。</string>
+    <string name="ignore_stylus_system_bars">禁止触控笔状态栏手势</string>
+    <string name="ignore_stylus_system_bars_summary">阻止笔尖和橡皮擦在全屏应用边缘滑出临时状态栏或导航条，手指手势照常使用。</string>
+    <string name="ignore_stylus_home_recents">禁止触控笔导航栏手势</string>
+    <string name="ignore_stylus_home_recents_summary">阻止笔尖和橡皮擦从底部上滑返回桌面或进入多任务。启用时会自动申请小米系统桌面作用域；手指手势照常使用。</string>
+    <string name="ignore_stylus_caption">禁止触控笔窗口控制器操作</string>
+    <string name="ignore_stylus_caption_summary">阻止笔尖和橡皮擦操作顶部三点控制器及小窗底部白条，笔输入透传到下层应用，保留手指原生操作。首次更新后需重启。</string>
+    <string name="ignore_stylus_corner_freeform">禁止触控笔屏幕角落小窗手势</string>
+    <string name="ignore_stylus_corner_freeform_summary">阻止笔尖和橡皮擦从屏幕左下角、右下角向内滑动进入无极小窗；保留手指手势与已有小窗操作。首次更新后需重启。</string>
+    <string name="ignore_stylus_focus_notification">禁止触控笔横滑唤出超级岛</string>
+    <string name="ignore_stylus_focus_notification_summary">超级岛已隐藏时，阻止笔尖和橡皮擦横向滑动将其唤出；横滑隐藏、点击展开、岛内操作和手指操作保持正常。</string>
+    <string name="ignore_stylus_split_divider">禁止触控笔分屏操作条操作</string>
+    <string name="ignore_stylus_split_divider_summary">阻止笔尖和橡皮擦拖动、点击或双击分屏中间操作条，以及操作已打开的分屏菜单；手指操作保留。首次更新后需重启。</string>
+    <string name="ignore_stylus_sidebar">禁止触控笔操作侧边条</string>
+    <string name="ignore_stylus_sidebar_summary">阻止笔尖和橡皮擦点击、拖动侧边条，展开的应用菜单可正常操作。启用时会申请平板管家作用域；更新后需重启对应应用进程。</string>
+    <string name="gesture_app_rules">分应用防误触设置</string>
+    <string name="gesture_apps_enabled">启用分应用设置</string>
+    <string name="gesture_apps_enabled_summary">勾选的应用使用独立八项开关，其余应用使用全局设置</string>
+    <string name="gesture_apps_active">已启用独立配置，其余应用使用全局设置</string>
+    <string name="gesture_apps_inactive">未启用，全部应用使用全局设置</string>
+    <string name="gesture_select_apps">选择独立配置应用</string>
+    <string name="gesture_selected_count">已启用 %1$d 个应用，其余使用全局设置</string>
+    <string name="gesture_apps_note">首次勾选会复制当前全局八项，之后独立保存。未勾选或无法识别的应用使用全局设置；取消勾选保留配置。一次触摸开始后保持本次决定，修改在下一次操作生效。</string>
+    <string name="gesture_app_checkbox">为 %1$s 启用独立防误触配置</string>
+    <string name="policy_profile_selected">启用此应用的独立配置</string>
+    <string name="gesture_profile_note">分应用设置开启且本应用被勾选时使用这八项；否则使用全局设置。取消勾选保留配置。</string>
+    <string name="gesture_apps_help">勾选复选框启用独立八项设置，点击应用编辑。未勾选的应用使用全局设置；取消勾选保留配置。</string>
+    <string name="gesture_bulk_profiles">为已安装系统应用启用独立防误触，新应用复制全局八项，已有配置保留。</string>
+    <string name="keyboard_picker">键盘自选按键</string>
+    <string name="keyboard_search">搜索按键名称或编号</string>
+    <string name="keyboard_capture">从实体键盘录入按键</string>
+    <string name="keyboard_listening">请按下并松开目标键（点击此处停止）</string>
+    <string name="custom_key_note">每次执行发送单个按键的按下与抬起，不是扫描码或组合键。按键效果取决于系统和前台应用。</string>
+    <string name="cancel">取消</string>
+    <string name="system_brush_title">系统轻捏与双击动作</string>
+    <string name="takeover_pinch">接管系统轻捏动作</string>
+    <string name="takeover_double_tap">接管系统双击动作</string>
+    <string name="brush_takeover_summary">开启后，全局动作与对应分应用配置生效；关闭时恢复接管前的系统设置。</string>
+    <string name="global_pinch_action">全局轻捏动作</string>
+    <string name="global_double_tap_action">全局双击动作</string>
+    <string name="pinch_apps">分应用轻捏设置</string>
+    <string name="double_tap_apps">分应用双击设置</string>
+    <string name="app_pinch_action">此应用的轻捏动作</string>
+    <string name="app_double_tap_action">此应用的双击动作</string>
+    <string name="brush_selected_count">已选择 %1$d 个应用，其余使用全局动作</string>
+    <string name="pinch_app_checkbox">为 %1$s 启用独立轻捏动作</string>
+    <string name="double_tap_app_checkbox">为 %1$s 启用独立双击动作</string>
+    <string name="brush_apps_help">勾选复选框启用独立动作，点击应用编辑。未勾选或焦点未知时使用全局动作；取消勾选保留配置。对应手势接管开关开启后生效。</string>
+    <string name="brush_bulk_profiles">为已安装系统应用选择独立配置，新配置复制全局动作，已有选择保留。</string>
+    <string name="brush_takeover_disabled">此手势的接管开关尚未开启，当前修改只保存配置。</string>
+    <string name="system_brush_note">轻捏与双击独立接管，默认关闭。切换应用焦点时同步系统动作；笔刷、色盘与参数面板需要前台应用支持。轻捏默认显示快捷环，双击默认切换橡皮擦。更新后重启设备。</string>
+    <string-array name="system_brush_actions">
+        <item>关闭</item><item>切换当前笔刷和橡皮擦</item><item>切换当前笔刷和上次使用笔刷</item><item>显示色盘</item><item>显示笔刷参数面板</item><item>显示快捷环</item>
+    </string-array>
+</resources>

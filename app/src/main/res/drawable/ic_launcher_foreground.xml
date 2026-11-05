@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 触控笔（旋转45°） -->
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="45">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M42,32Q42,27 47,27L51,27Q56,27 56,32L56,68L42,68Z" />
+        <path
+            android:fillColor="#DCE1FA"
+            android:pathData="M49,27L51,27Q56,27 56,32L56,68L49,68Z" />
+        <path
+            android:fillColor="#9FA8DA"
+            android:pathData="M42,32Q42,27 47,27L51,27Q56,27 56,32L56,35L42,35Z" />
+        <path
+            android:fillColor="#C5CAE9"
+            android:pathData="M42,68L56,68L52.5,77L45.5,77Z" />
+        <path
+            android:fillColor="#AAB4E3"
+            android:pathData="M49,68L56,68L52.5,77L49,77Z" />
+        <path
+            android:fillColor="#FFC107"
+            android:pathData="M45.5,77L52.5,77L49,85Z" />
+        <path
+            android:fillColor="#FFC107"
+            android:pathData="M46,38Q46,36 49,36Q52,36 52,38L52,46Q52,48 49,48Q46,48 46,46Z" />
+    </group>
+    <!-- 按键 → 映射动作 的连线 -->
+    <path
+        android:pathData="M63.5,46.5L71,54"
+        android:strokeColor="#FFC107"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+    <!-- 动作徽章 + 闪电（增强） -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M65.6,57.6a9,9 0 1,0 18,0a9,9 0 1,0 -18,0Z" />
+    <path
+        android:fillColor="#283593"
+        android:pathData="M76,50.5L70,58.8L73.6,58.8L72.8,64.8L79,56.2L75.2,56.2Z" />
+</vector>

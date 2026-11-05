@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- App-specific key mappings include installed apps without launcher activities. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <!-- Declared by some HyperOS versions; request only if the ROM marks it dangerous. -->
+    <uses-permission android:name="com.android.permission.GET_INSTALLED_APPS" />
+    <uses-permission android:name="com.miui.permission.GET_INSTALLED_APPS" />
+    <queries>
+        <package android:name="com.android.systemui" />
+        <package android:name="com.xiaomi.bluetooth" />
+        <package android:name="com.miui.securitycore" />
+        <package android:name="com.miui.securitycenter" />
+        <package android:name="com.miui.home" />
+        <package android:name="system" />
+    </queries>
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FocusStylus">
+        <!-- ConfigProvider.call checks the real Binder UID against scoped hosts. All CRUD
+             methods reject writes or return no data. SecurityCore need not hold a platform permission. -->
+        <provider
+            android:name=".config.ConfigProvider"
+            android:authorities="cc.star0.xposed.hyperstylus.config"
+            android:directBootAware="true"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+        <activity android:name=".ui.activity.SettingsActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

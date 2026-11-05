@@ -1,0 +1,28 @@
+name: 问题反馈
+description: 报告可以复现的功能问题
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 模块版本、设备和 ROM、触控笔、框架及 API 版本、相关宿主或前台应用版本。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 包含相关开关、作用域、进程是否重启，以及按键或手指／笔的操作顺序。
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: 日志与状态
+      description: 附上状态页信息和相关日志，移除个人信息、设备地址与无关内容。

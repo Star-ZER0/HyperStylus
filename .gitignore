@@ -1,0 +1,21 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+.idea/
+*.iml
+*.jks
+*.keystore
+
+# Local caches and temporary files
+*.log
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Firmware evidence and generated source archives
+/ota/
+/HyperStylus-*-source.zip
+/HyperStylus-*-source.zip.sha256
